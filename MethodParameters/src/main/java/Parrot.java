@@ -1,5 +1,5 @@
 
-public class MethodParameters {
+public class Parrot {
     /**
      * This method should return whatever String was passed into it by whatever invoked it (in this case, the test),
      * instead of returning "return text please!"
@@ -11,8 +11,8 @@ public class MethodParameters {
      * @param text is a parameter passed into this method by whatever called it.
      * @return text.
      */
-    public static void main(String[] args){
-        String str = copy("hello");
-        System.out.println(str);
+    public String copy(String txt){
+        
+        return txt;
     }
 }
