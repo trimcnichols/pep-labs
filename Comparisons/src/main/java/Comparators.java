@@ -17,7 +17,7 @@ public class Comparators {
         int a = 3;
         int b = 4;
         
-        return false;
+        return a == b;
     }
 
     /**
