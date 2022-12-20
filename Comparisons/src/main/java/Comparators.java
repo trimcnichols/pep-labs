@@ -14,10 +14,14 @@ public class Comparators {
      * @return true if a is equal to b, false otherwise.
      */
     public boolean isEqual(int a, int b){
+    
         int a = 3;
         int b = 4;
-        
-        return a == b;
+        if (a == b){
+            return true;
+        } 
+        else {
+            return false;
     }
 
     /**
@@ -28,6 +32,7 @@ public class Comparators {
     public boolean greaterThan(int a, int b){
         int a = 5:
         int b = 8;
+       
 
         return false;
     }
