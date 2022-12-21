@@ -52,9 +52,9 @@ public class Player {
      * @return 
      */
     public  Player(String playerName, int level){
-        
-        Object newPlayer = new Object();
 
+        this.playerName = playerName;
+        this.level = level;
         return ;
        
     }
