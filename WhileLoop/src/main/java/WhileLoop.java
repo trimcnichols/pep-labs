@@ -35,9 +35,13 @@ public class WhileLoop {
     public int whileExample(int end){
         int sum = 0;
         int i = 0;
-
-//        code here
-
-        return sum;
+      end = 6;
+        while (i < end){
+            sum = sum + i;
+            System.out.println(i);
+            System.out.println(sum);
+            i = i + 1;
+        }
+//   return sum;
     }
 }
