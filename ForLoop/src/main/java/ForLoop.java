@@ -39,11 +39,19 @@ public class ForLoop {
      *      @param end the value of i where the for loop should end (provided that the for loop is incremented with i++)
      *      @return the sum of all numbers between start and end, with start inclusive and end exclusive.
      */
-    public String returnNumbers(int start, int end){
-        String buildingString = "";
+    public int returnNumbers(int start, int end){
+        String buildingString = "1 2 3 4 5";
+        int i = 0;
+        start = i;
+     
+        int sum = 0;
+        end = buildingString.length() ;
+        for ( i = 0; i < end; i++) {
+        System.out.println(i);
+        int num = (int)i;
+        sum = sum + num;
+        }
 
-//        code here
-
-        return buildingString;
+        return sum;
     }
 }
