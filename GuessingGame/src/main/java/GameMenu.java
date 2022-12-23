@@ -20,8 +20,7 @@ public class GameMenu {
         while(playing){
             System.out.println("Guess: ");
             double guessNumber = userInputScanner.nextDouble();
-            boolean correct = gameService.checkGuess(guessNumber == 3.14);
-            
+            boolean correct = gameService.checkGuess(guessNumber);
             if(correct){
                 System.out.println("You got the secret number! Thanks for playing");
                 playing = false;

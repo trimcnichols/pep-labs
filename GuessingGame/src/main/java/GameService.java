@@ -26,7 +26,12 @@ public class GameService {
      * @param b the number that the user has input into their console.
      * @return true if guessNumber is equal to the secretNumber, false otherwise.
      */
-    public boolean checkGuess(boolean b) {
-        return false;
+    public boolean checkGuess(double guessNumber) {
+        if (guessNumber == secretNumber){
+        return true;
+        }
+        else {
+            return false;
+        }
     }
 }
