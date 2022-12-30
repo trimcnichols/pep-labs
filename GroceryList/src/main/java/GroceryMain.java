@@ -50,9 +50,9 @@ public class GroceryMain {
     public static void databaseSetup(){
         try {
             Connection conn = ConnectionUtil.getConnection();
-            PreparedStatement ps1 = conn.prepareStatement("drop table if exists grocery");
+            PreparedStatement ps1 = conn.prepareStatement("drop table if exists groceries");
             ps1.executeUpdate();
-            PreparedStatement ps2 = conn.prepareStatement("create table grocery(grocery_name varchar(255))");
+            PreparedStatement ps2 = conn.prepareStatement("create table groceries(grocery_name varchar(255))");
             ps2.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();
