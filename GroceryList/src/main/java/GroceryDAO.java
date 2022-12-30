@@ -48,7 +48,7 @@ public class GroceryDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "INSERT INTO groceries(grocery_name) Values (groceryName)";
+            String sql = "INSERT INTO groceries(grocery_name) VALUES (groceryName)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         }catch(SQLException e){
@@ -57,4 +57,5 @@ public class GroceryDAO {
     }
 
 }
+
 
