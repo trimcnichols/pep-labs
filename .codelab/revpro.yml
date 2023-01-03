@@ -33,8 +33,8 @@
     checkoutLocation: pep-gitpod-workspace
     upstreamRemoteURI: https://github.com/revature-curriculum/pep-gitpod-workspace.git
   :gitpod_workspace:
-    :workspace_id: trimcnichol-pepgitpodwo-kdvu82r1535
-    :workspace_url: https://trimcnichol-pepgitpodwo-kdvu82r1535.ws-us80.gitpod.io
+    :workspace_id: trimcnichol-pepgitpodwo-g10c2xytirc
+    :workspace_url: https://trimcnichol-pepgitpodwo-g10c2xytirc.ws-us80.gitpod.io
     :repo_root: "/workspace/pep-gitpod-workspace"
     :git_user_email: trimcnichols@protonmail.com
     :git_user_name: trimcnichols
