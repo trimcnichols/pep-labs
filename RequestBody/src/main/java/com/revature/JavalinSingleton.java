@@ -18,7 +18,7 @@ public class JavalinSingleton {
          */
         app.post("/songName", ctx -> {
            
-               ctx.result(ctx.body(artistName));
+               ctx.result(ctx.body());
               
         });
 
