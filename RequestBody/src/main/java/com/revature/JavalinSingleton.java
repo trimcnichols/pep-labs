@@ -16,11 +16,13 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/problem1", ctx -> {
-                //implement logic here
+        app.post("/songName", ctx -> {
+           
+               ctx.result(ctx.body(artistName));
+              
         });
 
-        /**
+         /**
          * problem2: retrieve the song object from the request body...
          *      1. update the artist in the song object to "Beatles"
          *      2. return the updated song object in the response body
@@ -28,11 +30,11 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem2", ctx -> {
-               //implement logic here
-        });
+            //implement logic here
+     });
 
 
-        return app;
-    }
-    
+     return app;
+ }
+ 
 }
