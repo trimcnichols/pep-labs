@@ -19,55 +19,58 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/song", ctx -> {
-                      
-             //retrieve the json string from the request body
-                 String jsonString = ctx.body();
-
-             //utilize jackson to convert the json string to a user object
-                 ObjectMapper om = new ObjectMapper();
-                 Song song = om.readValue(jsonString, Song.class);
-
+            //retrieve the json string from the request body
+            String jsonString = ctx.body();
+        
+            //utilize jackson to convert the json string to a user object
+            ObjectMapper om = new ObjectMapper();
+            Song song = om.readValue(jsonString, Song.class);
+        
             //we need to let the request know we will send back json in the body
-                 ctx.contentType("application/json"); 
-
-                 //return the json string in the response body
-                 String artistName = om.writeValueAsString(song);
-                 ctx.result(artistName);
-                  });
+            ctx.contentType("application/json"); 
+        
+            //change the last name
+           // user.setLastname("Jones");
             
-              
-       
+            //utilize jackson convert back the user object to a json string
+           String artist = om.writeValueAsString(song);
+        
+            //return the json string in the response body
+            ctx.result(artist);
 
-         /**
+        });
+
+        /**
          * problem2: retrieve the song object from the request body...
          *      1. update the artist in the song object to "Beatles"
          *      2. return the updated song object in the response body
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/song", ctx -> {
-             //retrieve the json string from the request body
-    String jsonString = ctx.body();
+        app.post("/artis", ctx -> {
+           
+                //retrieve the json string from the request body
+                String jsonString = ctx.body();
+            
+                //utilize jackson to convert the json string to a user object
+                ObjectMapper om = new ObjectMapper();
+                Song song = om.readValue(jsonString, Song.class);
+            
+                //we need to let the request know we will send back json in the body
+                ctx.contentType("application/json"); 
+            
+                //change the last name
+               song.artistName("Beatles");
+                
+                //utilize jackson convert back the user object to a json string
+                String artistName = om.writeValueAsString(song);
+            
+                //return the json string in the response body
+                ctx.result(artistName);
+        });
 
-    //utilize jackson to convert the json string to a user object
-    ObjectMapper om = new ObjectMapper();
-    Song song = om.readValue(jsonString, Song.class);
 
-    //we need to let the request know we will send back json in the body
-    ctx.contentType("application/json"); 
-
-    //change the artist name
-    song.artistName("Beatles");
+        return app;
+    }
     
-    //utilize jackson convert back the user object to a json string
-    String artistName = om.writeValueAsString(song);
-
-    //return the json string in the response body
-    ctx.result(artistName);
-     });
-
-
-     return app;
- }
- 
 }
