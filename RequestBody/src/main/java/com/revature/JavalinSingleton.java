@@ -18,7 +18,7 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
-        app.post("/artistName", ctx -> {
+        app.post("/problem1", ctx -> {
             //retrieve the json string from the request body
             String jsonString = ctx.body();
         
@@ -27,16 +27,16 @@ public class JavalinSingleton {
             Song song = om.readValue(jsonString, Song.class);
         
             //we need to let the request know we will send back json in the body
-            ctx.contentType("application/json"); 
+            //ctx.contentType("application/json"); 
         
             //change the last name
            // user.setLastname("Jones");
             
             //utilize jackson convert back the user object to a json string
-            String artistName = om.writeValueAsString(song);
+            //String artistName = om.writeValueAsString(song);
         
             //return the json string in the response body
-            ctx.result(artistName);
+            ctx.result(song.getArtistName());
 
         });
 
@@ -60,10 +60,11 @@ public class JavalinSingleton {
                 ctx.contentType("application/json"); 
             
                 //change the artist name
-               song.artistName("Beatles");
+               song.setArtistName("Beatles");
                 
                 //utilize jackson convert back the user object to a json string
                String artistName = om.writeValueAsString(song);
+              
             
                 //return the json string in the response body
                 ctx.result(artistName);
