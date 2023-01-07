@@ -31,11 +31,15 @@ public class Pyramid {
         String a = "";
         String b = "";
         for (int i = 1; i <= n ; i++){
+         
+    
             for (int j =0; j<= i; j++){
                b = b + "*";
+               a = a + "\n"+ b ;
+              // System.out.println("*");
             }
-            a = a + b;
-    }
+            //System.out.println();
+        }  
         return "a";
     }
 }
