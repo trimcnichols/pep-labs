@@ -71,7 +71,7 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setInt(1,flight_id);
+            preparedStatement.setInt(1,id);
             preparedStatement.setString(1,"depature_city");
 
             ResultSet rs = preparedStatement.executeQuery();
@@ -157,7 +157,7 @@ public class FlightDAO {
 
             preparedStatement.setString(1,"depature_city");
             preparedStatement.setString(2,"arrival_city");
-            preparedStatement.setInt(3,flight_id);
+            preparedStatement.setInt(3,id);
             preparedStatement.executeUpdate();
         }catch(SQLException e){
             System.out.println(e.getMessage());
@@ -191,8 +191,8 @@ public class FlightDAO {
 
             //write PreparedStatement setString and setInt methods here.
             preparedStatement.setString(1,"depature_city");
-            preparedStatement.setString(1,"arrival_city");
-            preparedStatement.setInt(2,123);
+            preparedStatement.setString(2,"arrival_city");
+            preparedStatement.setInt(3,id);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
