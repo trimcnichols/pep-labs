@@ -28,16 +28,17 @@ public class Pyramid {
      */
     public String returnPyramid(int n){
         String a =""; 
+       
         for (int i = 1; i <= n ; i++){
              
             for (int j =0; j<= i; j++){
+                              
+               a= a+ "*";
                
-               
-               a = a + "*";
               
               // System.out.println("*");
             }
-            //System.out.println();
+            System.out.println();
            
         }  
         return "a";
