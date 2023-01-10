@@ -28,19 +28,21 @@ public class Pyramid {
      */
     public String returnPyramid(int n){
         String a =""; 
-       
+       String b = "";
         for (int i = 1; i <= n ; i++){
              
-            for (int j =0; j<= i; j++){
+            for (int j =0; j< i; j++){
                               
-               a= a+ "*";
+               b= b+ "*";
                
               
               // System.out.println("*");
             }
-            System.out.println();
-           
-        }  
-        return "a";
+
+            a = a+ b + "\n";
+           b="";
+        } 
+      
+        return a;
     }
 }
