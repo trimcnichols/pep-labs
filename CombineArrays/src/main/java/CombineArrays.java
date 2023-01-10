@@ -12,7 +12,7 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
     public ArrayList<Integer> combine(int[] arr1, int[] arr2){
-        //int[] arr = new int[arr1.length+arr2.length];
+        int[] arr = new int[arr1.length+arr2.length];
         ArrayList<Integer> arr3 = new ArrayList<>();
         
         for (int i = 0; i < arr1.length; i++) {
