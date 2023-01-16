@@ -34,7 +34,7 @@ public class AdvancedBooleanLogic {
      * @return true if either b1 or b2 is true, but false if they are both true or both false.
      */
     public boolean returnExclusiveOr(boolean b1, boolean b2){
-        boolean isXor = (b1 == true || b2 == true )? true :false;
+        boolean isXor = ( b1!= b2)? true :false;
     
         return isXor;
     }   
@@ -45,7 +45,7 @@ public class AdvancedBooleanLogic {
      * @return true if neither b1 nor b2 are true. Return false if either b1 or b2 is true.
      */
     public boolean returnNeitherNor(boolean b1, boolean b2){
-        boolean isNOR = (b1 == false || b2 == false )? true :false;
+        boolean isNOR = (b1 == false && b2 == false)? true :false;
     
         return isNOR;
     }
