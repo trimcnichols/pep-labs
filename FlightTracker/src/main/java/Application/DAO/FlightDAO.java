@@ -192,10 +192,11 @@ public class FlightDAO {
             String sql = "select * from flights WHERE depature_city = ? and arrival_city = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
+            Flight flight;
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(0,"+getDeparture_city()+");
+            preparedStatement.setString(0,flight.getDeparture_city());
             
-            preparedStatement.setString(1,"+getArrival_city()+");
+            preparedStatement.setString(1,flight.getArrival_city());
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
