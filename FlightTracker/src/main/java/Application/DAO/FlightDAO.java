@@ -73,7 +73,7 @@ public class FlightDAO {
             //write preparedStatement's setString and setInt methods here.
             preparedStatement.setInt(1,id);
             
-
+        
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
                 Flight flight = new Flight(rs.getInt("flight_id"), rs.getString("departure_city"),
@@ -114,8 +114,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setString(1,"+departure_city+");
-            preparedStatement.setString(2,"+arrival_city+");
+            preparedStatement.setString(1,"+getDeparture_city()+");
+            preparedStatement.setString(2,"+getArrival_city()+");
 
             preparedStatement.executeUpdate();
             ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
@@ -155,8 +155,8 @@ public class FlightDAO {
 
             //write PreparedStatement setString and setInt methods here.
 
-            preparedStatement.setString(1,"depature_city");
-            preparedStatement.setString(2,"arrival_city");
+            preparedStatement.setString(1,"+getDeparture_city()+");
+            preparedStatement.setString(2,"+getArrival_city()+");
             preparedStatement.setInt(3,id);
 
 
@@ -193,9 +193,9 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(1,"depature_city");
+            preparedStatement.setString(1,"+getDeparture_city()+");
             
-            preparedStatement.setInt(2,123);
+            preparedStatement.setString(2,"+getArrival_city()+");
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
