@@ -71,7 +71,7 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setInt(1,id);
+            preparedStatement.setInt(0,id);
             
         
             ResultSet rs = preparedStatement.executeQuery();
@@ -114,8 +114,8 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             //write preparedStatement's setString and setInt methods here.
-            preparedStatement.setString(1,"+getDeparture_city()+");
-            preparedStatement.setString(2,"+getArrival_city()+");
+            preparedStatement.setString(0,flight.getDeparture_city());
+            preparedStatement.setString(1,flight.getArrival_city());
 
             preparedStatement.executeUpdate();
             ResultSet pkeyResultSet = preparedStatement.getGeneratedKeys();
@@ -155,9 +155,9 @@ public class FlightDAO {
 
             //write PreparedStatement setString and setInt methods here.
 
-            preparedStatement.setString(1,"+getDeparture_city()+");
-            preparedStatement.setString(2,"+getArrival_city()+");
-            preparedStatement.setInt(3,id);
+            preparedStatement.setString(0,flight.getDeparture_city());
+            preparedStatement.setString(1,flight.getArrival_city());
+            preparedStatement.setInt(2,id);
 
 
             preparedStatement.executeUpdate();
@@ -193,9 +193,9 @@ public class FlightDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.
-            preparedStatement.setString(1,"+getDeparture_city()+");
+            preparedStatement.setString(0,"+getDeparture_city()+");
             
-            preparedStatement.setString(2,"+getArrival_city()+");
+            preparedStatement.setString(1,"+getArrival_city()+");
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
