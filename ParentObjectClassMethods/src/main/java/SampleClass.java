@@ -56,8 +56,13 @@ public class SampleClass {
     public boolean b;
 
     //    implement a custom .equals(SampleClass other){} method here.
+SampleClass sp = new SampleClass();
+ SampleClass bs  = new SampleClass(){
 
-
+ 
+ b = sp.equal(bs) ;
+ return b;
+ }
     //    implement a custom .toString(){} method here.
 
     
