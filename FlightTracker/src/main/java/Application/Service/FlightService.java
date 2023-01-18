@@ -45,9 +45,11 @@ public class FlightService {
      *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
-        return null;
+       
+        
+       return flightDAO.insertFlight(flight);
     }
-
+   
     /**
      * TODO: Use the FlightDAO to update an existing flight from the database.
      * You should first check that the flight ID already exists. To do this, you could use an if statement that checks
@@ -61,10 +63,10 @@ public class FlightService {
      *         user should have some insight if they attempted to edit a nonexistent flight.)
      */
     public Flight updateFlight(int flight_id, Flight flight){
-        if (flightDAO.getFlightById(flight_id)!=null){
-            flightDAO.setFlight_id(flight_id);
-            return flight;
-        }
+      if( flightDAO.getFlightById(flight_id)!=null){
+       
+        return flightDAO.getFlightById(flight_id);
+      }
         return null;
     }
 
@@ -75,7 +77,8 @@ public class FlightService {
      * @return all flights in the database.
      */
     public List<Flight> getAllFlights() {
-        return null;
+        flightDAO.getAllFlights();
+        return  flightDAO.getAllFlights();
     }
 
     /**
@@ -87,6 +90,7 @@ public class FlightService {
      * @return all flights departing from departure_city and arriving at arrival_city.
      */
     public List<Flight> getAllFlightsFromCityToCity(String departure_city, String arrival_city) {
-        return null;
+        
+        return flightDAO.getAllFlightsFromCityToCity(departure_city,arrival_city);
     }
 }
