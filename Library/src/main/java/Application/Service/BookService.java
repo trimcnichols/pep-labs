@@ -51,11 +51,11 @@ public class BookService {
      * key was already in use.)
      */
     public Book addBook(Book book) {
-        if(bookDAO.getBookByIsbn(book)!=null){
+        if(bookDAO.getBookByIsbn(book.getIsbn())!=null ){
             bookDAO.insertBook(book);
         }
 
-        return bookDAO.addBook(book);
+        return book;
     }
     /**
      * TODO: Use the bookDAO to retrieve a list of all books that have a bookCount above 0.

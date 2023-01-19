@@ -112,11 +112,10 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "select * from book where count > 0 group by ?";
+            String sql = "select * from book  count(?) > 0 ";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
             //write preparedStatement's setInt method here.
-            preparedStatement.setString( 1,"title");
+            preparedStatement.setInt( 1,book.getCopies_available());
 
 
             ResultSet rs = preparedStatement.executeQuery();
