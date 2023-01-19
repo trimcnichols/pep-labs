@@ -40,12 +40,12 @@
     :git_user_name: trimcnichols
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 0
+  :count_labs_passed: 1
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 6
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 3
+  :count_tests_passed: 6
   Start:
     :Week: 1
     :Order: 1
@@ -976,11 +976,11 @@
     :Order: 7
     :Type: challenge
     :count_tests: 6
-    :count_tests_passed: 3
+    :count_tests_passed: 6
     :tests:
-      isoTest1: 0
-      isoTest2: 0
-      isoTest3: 0
+      isoTest1: 1
+      isoTest2: 1
+      isoTest3: 1
       isoTest4: 1
       isoTest5: 1
       isoTest6: 1
