@@ -1,3 +1,5 @@
+import java.util.HashSet;
+import java.util.Set;
 
 public class Isogram {
     /**
@@ -14,15 +16,12 @@ public class Isogram {
      */
     public boolean isIsogram(String str){
        
-        char[] arr = new char[str.length()];
-       for (int i =0; i < arr.length; i++){
-        for (int j = i + 1; j< arr.length; j++){
-            if (arr[i] == arr[j] && i!=j){
-                return false;
-            }
-        }
-       }
+        Set<String> mystr = new HashSet<String>();
+        for (int i = 0; i< str.length(); i ++){
+            mystr.add("str[i]");
 
+        }
+        
         return true;
     }
 }
