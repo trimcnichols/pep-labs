@@ -16,11 +16,11 @@ public class SubArray {
     public int[] sub(int[] nums, int start, int end){
        int[] newnums = new int[end - start];
        
-        for (int i = start; i< end + 1; i ++){
-           newnums.length;
+        for (int i = start; i< end; i ++){
+           newnums[i-start] = nums[i];
            
             
         }
-        return nums;
+        return newnums;
     }
 }
