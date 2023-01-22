@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class MostCommonCharacter {
     /**
@@ -8,12 +9,14 @@ public class MostCommonCharacter {
      * @return the most common character within str.
      */
     public char recurringChar(String str) {
-        char arr1 = 0;
-        String[] arr = str.split("");
-        for (int i = 0 ; i< arr.length; i++)
-        if(arr[i] != arr[i+1]){ 
-            arr2 = arr[i+1];
+        int [] mapCount = new int[26];
+
+        for (int i = 0; i< str.size(); i ++){
+            for (int j = 0; j< str.get(i).length(); j++){
+
+            }
         }
+
         return ' ';
     }
 }
