@@ -12,23 +12,25 @@ public class MostCommonCharacter {
      */
     public char recurringChar(String str) {
         HashMap<Character, Integer> map = new HashMap<Character, Integer>(); 
-        String joinedstr = String.join(" ", str);
+        char[] mychar = str.toCharArray();
          Character maxappearchar =' ';
-         for (int i = 0; i < joinedstr.length(); i ++){
-             if ( map.containsKey(joinedstr.charAt(i)))
+        
+         for (int i = 0; i < mychar.length; i ++){
+             if ( map.containsKey(mychar[i]))
               {
-                    map.put (joinedstr.charAt(i), map.get(joinedstr.charAt(i)) + 1 );
+                    map.put (mychar[i], map.get(mychar[i]) + 1 );
+
               }       
               else
               {
-                map.put (joinedstr.charAt(i), 1);
+                map.put (mychar[i], 1);
               }           
          }  
      
          // Got the number of maximum occuarance
   Integer maxNum = Collections.max(map.values());
 
-    // Iterate to search the result.
+    // Iterate to search the character result.
     
  for (Entry<Character, Integer> entry : map.entrySet()) {
        
