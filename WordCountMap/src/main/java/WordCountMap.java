@@ -1,6 +1,6 @@
 
 import java.util.*;
-import java.util.Map;
+import java.util.HashMap;
 
 public class WordCountMap {
     /**
@@ -29,7 +29,7 @@ public class WordCountMap {
                 map.put(mapwords[i], 1);
             }
         }
-     
+
         return map;
     }
 }
