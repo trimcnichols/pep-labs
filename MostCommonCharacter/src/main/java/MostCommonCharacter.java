@@ -12,8 +12,10 @@ public class MostCommonCharacter {
      */
     public char recurringChar(String str) {
         HashMap<Character, Integer> map = new HashMap<Character, Integer>(); 
+       // String[] arrOfStr = str.split("+");
+       // String mystr = arrOfStr.toString();
         char[] mychar = str.toCharArray();
-         Character maxappearchar =' ';
+        Character maxappearchar =' ';
         
          for (int i = 0; i < mychar.length; i ++){
              if ( map.containsKey(mychar[i]))
@@ -32,13 +34,15 @@ public class MostCommonCharacter {
 
     // Iterate to search the character result.
     
- for (Entry<Character, Integer> entry : map.entrySet()) {
+        for (Entry<Character, Integer> entry : map.entrySet()) {
        
-        if(maxNum == entry.getValue()){
-            maxappearchar=entry.getKey();
-        }
-    }
-            return maxappearchar;
+             if( entry.getValue()== maxNum){
+                 maxappearchar=entry.getKey();
+         }
+         }
+         
+            
+         return maxappearchar;
            
     }
 }
