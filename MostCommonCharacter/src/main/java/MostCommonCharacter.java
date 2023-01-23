@@ -15,13 +15,13 @@ public class MostCommonCharacter {
         String joinedstr = String.join(" ", str);
          Character maxappearchar =' ';
          for (int i = 0; i < joinedstr.length(); i ++){
-             if ( map.containsKey(str.charAt(i)))
+             if ( map.containsKey(joinedstr.charAt(i)))
               {
-                    map.put (str.charAt(i), map.get(str.charAt(i)) + 1 );
+                    map.put (joinedstr.charAt(i), map.get(joinedstr.charAt(i)) + 1 );
               }       
               else
               {
-                map.put (str.charAt(i), 1);
+                map.put (joinedstr.charAt(i), 1);
               }           
          }  
      
