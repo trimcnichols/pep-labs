@@ -17,16 +17,16 @@ public class WordCountMap {
      */
     public Map<String, Integer> returnWordMap(String words){
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        String[] mapwords = words.split("");
-        int count = 1;
-        for ( int i = 0 ; i < mapwords.length; i ++){
-
-            if (map.containsKey(mapwords[i])){
-                map.put(mapwords[i],count + 1);
+        String[] mapwords = words.split(" ");
+        
+        for (String word : mapwords){
+            Integer count = map.get(word);
+            if (map.containsKey(word)){
+                map.put(word,count + 1);
             }
             else {
                
-                map.put(mapwords[i], 1);
+                map.put(word, 1);
             }
         }
 
