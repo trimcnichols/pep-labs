@@ -14,6 +14,8 @@ public class CauseUncheckedException {
      * event happens, like running out of computer memory.
      */
     public void throwUncheckedException(){
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        System.out.println(cars[10]);
 
     }
 }
