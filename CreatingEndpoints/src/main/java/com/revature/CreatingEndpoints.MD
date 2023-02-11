@@ -66,6 +66,9 @@ public static void main(String[] args){
         //logic to be executed when this endpoint is hit
     });
 }
+
+    
+}
 ```
 
 ### Step 3: Returning Text
